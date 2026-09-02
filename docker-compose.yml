@@ -1,0 +1,18 @@
+services:
+  worker:
+    build: ./worker
+    env_file: .env
+    expose:
+      - "4001"
+    restart: unless-stopped
+
+  web:
+    build: ./web
+    env_file: .env
+    environment:
+      - WORKER_URL=http://worker:4001
+    ports:
+      - "3000:3000"
+    depends_on:
+      - worker
+    restart: unless-stopped
