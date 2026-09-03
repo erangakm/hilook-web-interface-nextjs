@@ -3,9 +3,17 @@
 import { useCameraFeed } from '@/hooks/useCameraFeed';
 import { CameraTile } from './CameraTile';
 
-export default function FocusGrid({ main, others }: { main: number; others: number[] }) {
+export default function FocusGrid({
+  main,
+  others,
+  pollIntervalMs,
+}: {
+  main: number;
+  others: number[];
+  pollIntervalMs: number;
+}) {
   const cameras = [main, ...others];
-  const { fullscreenId, imgRefs, toggle } = useCameraFeed(cameras);
+  const { fullscreenId, imgRefs, toggle } = useCameraFeed(cameras, pollIntervalMs);
 
   return (
     <div className="focus">

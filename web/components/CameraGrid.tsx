@@ -4,9 +4,9 @@ import type { CSSProperties } from 'react';
 import { useCameraFeed } from '@/hooks/useCameraFeed';
 import { CameraTile } from './CameraTile';
 
-export default function CameraGrid({ groups }: { groups: number[][] }) {
+export default function CameraGrid({ groups, pollIntervalMs }: { groups: number[][]; pollIntervalMs: number }) {
   const cameras = groups.flat();
-  const { fullscreenId, imgRefs, toggle } = useCameraFeed(cameras);
+  const { fullscreenId, imgRefs, toggle } = useCameraFeed(cameras, pollIntervalMs);
   const maxRowSize = Math.max(...groups.map((group) => group.length));
 
   return (

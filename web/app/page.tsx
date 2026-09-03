@@ -4,5 +4,5 @@ import CameraGrid from '@/components/CameraGrid';
 export const dynamic = 'force-dynamic';
 
 export default function Home() {
-  return <CameraGrid groups={config.cameraGroups} />;
+  return <CameraGrid groups={config.cameraGroups} pollIntervalMs={config.pollIntervalMs} />;
 }

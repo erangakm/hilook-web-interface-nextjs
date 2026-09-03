@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-export function useCameraFeed(cameras: number[]) {
+export function useCameraFeed(cameras: number[], pollIntervalMs: number) {
   const [fullscreenId, setFullscreenId] = useState<number | null>(null);
   const imgRefs = useRef<Record<number, HTMLImageElement | null>>({});
 
@@ -18,9 +18,9 @@ export function useCameraFeed(cameras: number[]) {
         };
         next.src = `/api/snapshot/${id}?t=${Date.now()}`;
       });
-    }, 400);
+    }, pollIntervalMs);
     return () => clearInterval(interval);
-  }, [fullscreenId, cameras]);
+  }, [fullscreenId, cameras, pollIntervalMs]);
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
