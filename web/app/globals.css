@@ -14,11 +14,46 @@ body {
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  --cell-w: min(calc(100vw / var(--max-row-size)), calc(100vh * 16 / 9 / var(--row-count)));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
+  gap: 2px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
+.row .cam {
+  width: var(--cell-w);
+  height: calc(var(--cell-w) * 9 / 16);
+}
+
+.focus {
+  --sub-w: min(calc(100vw / 4), calc(100vh * 8 / 9));
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.cam-main {
+  width: calc(var(--sub-w) * 2 + 2px);
+  height: calc(var(--sub-w) * 9 / 16 * 2 + 2px);
+}
+
+.focus-others {
+  display: grid;
+  grid-template-columns: repeat(2, var(--sub-w));
+  grid-template-rows: repeat(2, calc(var(--sub-w) * 9 / 16));
   gap: 2px;
 }
 
@@ -53,11 +88,12 @@ body {
 }
 
 .fullscreen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  position: fixed !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(100vw, calc(100vh * 16 / 9)) !important;
+  height: min(100vh, calc(100vw * 9 / 16)) !important;
   z-index: 1000;
   background: #000;
   border: none;
@@ -65,8 +101,8 @@ body {
 }
 
 .fullscreen img {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   object-fit: fill;
 }
 

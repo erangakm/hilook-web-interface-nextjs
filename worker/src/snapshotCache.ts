@@ -23,9 +23,9 @@ const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 export async function startPolling(): Promise<void> {
   for (;;) {
-    await Promise.all(config.group1.map(fetchSingle));
-    await sleep(config.pollIntervalMs);
-    await Promise.all(config.group2.map(fetchSingle));
-    await sleep(config.pollIntervalMs);
+    for (const group of config.groups) {
+      await Promise.all(group.map(fetchSingle));
+      await sleep(config.pollIntervalMs);
+    }
   }
 }

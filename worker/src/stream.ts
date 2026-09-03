@@ -13,7 +13,7 @@ export function createMjpegStream(camId: number): Readable {
 
   const ffmpeg = spawn(
     'ffmpeg',
-    ['-rtsp_transport', 'tcp', '-i', rtspUrl, '-f', 'mjpeg', '-q:v', '5', '-r', '10', 'pipe:1'],
+    ['-rtsp_transport', 'tcp', '-i', rtspUrl, '-f', 'mjpeg', '-q:v', '5', '-r', '25', 'pipe:1'],
     { stdio: ['ignore', 'pipe', 'ignore'] },
   );
 

@@ -6,6 +6,14 @@ function parseIntList(value: string | undefined): number[] {
     .map(Number);
 }
 
+function allGroups(): number[][] {
+  return Object.keys(process.env)
+    .filter((key) => /^GROUP_\d+$/.test(key))
+    .sort((a, b) => Number(a.slice(6)) - Number(b.slice(6)))
+    .map((key) => parseIntList(process.env[key]))
+    .filter((group) => group.length > 0);
+}
+
 export const config = {
   camUser: process.env.CAM_USER ?? '',
   camPass: process.env.CAM_PASS ?? '',
@@ -13,7 +21,6 @@ export const config = {
   camStream: process.env.CAM_STREAM ?? '1',
   pollIntervalMs: Number(process.env.POLL_INTERVAL ?? '1') * 1000,
   targetCameras: parseIntList(process.env.TARGET_CAMERAS),
-  group1: parseIntList(process.env.GROUP_1),
-  group2: parseIntList(process.env.GROUP_2),
+  groups: allGroups(),
   port: Number(process.env.WORKER_PORT ?? '4001'),
 };
