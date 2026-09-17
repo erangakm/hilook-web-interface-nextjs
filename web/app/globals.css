@@ -13,48 +13,34 @@ body {
   height: 100vh;
 }
 
-.grid {
-  --cell-w: min(calc(100vw / var(--max-row-size)), calc(100vh * 16 / 9 / var(--row-count)));
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  gap: 2px;
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-  gap: 2px;
-}
-
-.row .cam {
-  width: var(--cell-w);
-  height: calc(var(--cell-w) * 9 / 16);
-}
-
 .focus {
-  --sub-w: min(calc(100vw / 4), calc(100vh * 8 / 9));
+  --gap: 2px;
+  --sub-h: calc((100vh - 3 * var(--gap)) / 4);
+  --sub-w: calc(var(--sub-h) * 16 / 9);
+  --main-w: min(calc(100vw - var(--sub-w) - var(--gap)), calc(100vh * 16 / 9));
+  --main-h: calc(var(--main-w) * 9 / 16);
   display: flex;
   width: 100vw;
   height: 100vh;
   justify-content: center;
   align-items: center;
-  gap: 2px;
+  gap: var(--gap);
 }
 
 .cam-main {
-  width: calc(var(--sub-w) * 2 + 2px);
-  height: calc(var(--sub-w) * 9 / 16 * 2 + 2px);
+  width: var(--main-w);
+  height: var(--main-h);
 }
 
 .focus-others {
-  display: grid;
-  grid-template-columns: repeat(2, var(--sub-w));
-  grid-template-rows: repeat(2, calc(var(--sub-w) * 9 / 16));
-  gap: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.focus-others .cam {
+  width: var(--sub-w);
+  height: var(--sub-h);
 }
 
 .cam {

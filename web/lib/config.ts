@@ -19,7 +19,6 @@ const groups = allGroups();
 export const config = {
   workerUrl: process.env.WORKER_URL ?? 'http://worker:4001',
   targetCameras: parseIds(process.env.TARGET_CAMERAS),
-  cameraGroups: groups,
   focusMain: groups[0]?.[0],
   focusOthers: groups.slice(1).flat(),
   pollIntervalMs: Number(process.env.POLL_INTERVAL ?? '1') * 1000,

@@ -1,8 +1,8 @@
 import { config } from '@/lib/config';
-import CameraGrid from '@/components/CameraGrid';
+import FocusGrid from '@/components/FocusGrid';
 
 export const dynamic = 'force-dynamic';
 
 export default function Home() {
-  return <CameraGrid groups={config.cameraGroups} pollIntervalMs={config.pollIntervalMs} />;
+  return <FocusGrid main={config.focusMain!} others={config.focusOthers} pollIntervalMs={config.pollIntervalMs} />;
 }
