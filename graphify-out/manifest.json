@@ -1,0 +1,140 @@
+{
+  "web/app/api/snapshot/[camId]/route.ts": {
+    "mtime": 1788353704.3300753,
+    "seen": 1789650263.494123,
+    "ast_hash": "e70cd7c7c8856242c88b823fdbbd5a85",
+    "semantic_hash": "e70cd7c7c8856242c88b823fdbbd5a85"
+  },
+  "web/app/api/stream/[camId]/route.ts": {
+    "mtime": 1788353705.744711,
+    "seen": 1789650263.494126,
+    "ast_hash": "143ad054537373722688f7ca696ce99a",
+    "semantic_hash": "143ad054537373722688f7ca696ce99a"
+  },
+  "web/app/layout.tsx": {
+    "mtime": 1788353695.9533136,
+    "seen": 1789650263.494127,
+    "ast_hash": "43c66860657bc78f017639d68150f8d1",
+    "semantic_hash": "43c66860657bc78f017639d68150f8d1"
+  },
+  "web/app/page.tsx": {
+    "mtime": 1789648718.1281295,
+    "seen": 1789650263.494127,
+    "ast_hash": "d6e29b20f0afdbc11e98dd709ac17a1b",
+    "semantic_hash": "d6e29b20f0afdbc11e98dd709ac17a1b"
+  },
+  "web/components/CameraTile.tsx": {
+    "mtime": 1788440690.9987812,
+    "seen": 1789650263.4941282,
+    "ast_hash": "0bd02d5f6248ed5f9fa3c3b464a22e6a",
+    "semantic_hash": "0bd02d5f6248ed5f9fa3c3b464a22e6a"
+  },
+  "web/components/FocusGrid.tsx": {
+    "mtime": 1788441981.9965222,
+    "seen": 1789650263.494129,
+    "ast_hash": "e1a9b0de18fb8aafe9c5bd7cadc46a75",
+    "semantic_hash": "e1a9b0de18fb8aafe9c5bd7cadc46a75"
+  },
+  "web/global.d.ts": {
+    "mtime": 1788441690.5186293,
+    "seen": 1789650263.494129,
+    "ast_hash": "77c5097fbf0b3cc8710ee9416ce251bc",
+    "semantic_hash": "77c5097fbf0b3cc8710ee9416ce251bc"
+  },
+  "web/hooks/useCameraFeed.ts": {
+    "mtime": 1788441965.2185616,
+    "seen": 1789650263.49413,
+    "ast_hash": "50a805adf43db41a53fa3cf15de73f85",
+    "semantic_hash": "50a805adf43db41a53fa3cf15de73f85"
+  },
+  "web/lib/config.ts": {
+    "mtime": 1789648718.1283643,
+    "seen": 1789650263.49413,
+    "ast_hash": "c20a38995f29efc1cc60e26aa53f46c3",
+    "semantic_hash": "c20a38995f29efc1cc60e26aa53f46c3"
+  },
+  "web/next-env.d.ts": {
+    "mtime": 1789648718.1285744,
+    "seen": 1789650263.4941308,
+    "ast_hash": "b5ed9dd8b4c5ba8e5ab8e6a379c15838",
+    "semantic_hash": "b5ed9dd8b4c5ba8e5ab8e6a379c15838"
+  },
+  "web/next.config.mjs": {
+    "mtime": 1788354225.076862,
+    "seen": 1789650263.494132,
+    "ast_hash": "a7ffd1ed5129f5f20e051ddcd4323cfa",
+    "semantic_hash": "a7ffd1ed5129f5f20e051ddcd4323cfa"
+  },
+  "web/package.json": {
+    "mtime": 1788353682.3175998,
+    "seen": 1789650263.494132,
+    "ast_hash": "03ffd6c62f8fd3c96e8a70cf1bfa2774",
+    "semantic_hash": "03ffd6c62f8fd3c96e8a70cf1bfa2774"
+  },
+  "web/tsconfig.json": {
+    "mtime": 1788353685.0402637,
+    "seen": 1789650263.494133,
+    "ast_hash": "3845ba465b50728d69e9dc9c327d8a56",
+    "semantic_hash": "3845ba465b50728d69e9dc9c327d8a56"
+  },
+  "worker/package.json": {
+    "mtime": 1788353655.1245203,
+    "seen": 1789650263.494133,
+    "ast_hash": "9509db1d5abfb670d66b199140965591",
+    "semantic_hash": "9509db1d5abfb670d66b199140965591"
+  },
+  "worker/src/config.ts": {
+    "mtime": 1788441033.9670413,
+    "seen": 1789650263.494134,
+    "ast_hash": "0c5fd520011339512c68a9c62638cc3d",
+    "semantic_hash": "0c5fd520011339512c68a9c62638cc3d"
+  },
+  "worker/src/digestAuth.ts": {
+    "mtime": 1788353667.7411575,
+    "seen": 1789650263.494134,
+    "ast_hash": "f0d6a47faca2b2cf95c054a7182d5e87",
+    "semantic_hash": "f0d6a47faca2b2cf95c054a7182d5e87"
+  },
+  "worker/src/index.ts": {
+    "mtime": 1788353680.5220394,
+    "seen": 1789650263.4941351,
+    "ast_hash": "a10ada8fbadea8e219949efe8214c346",
+    "semantic_hash": "a10ada8fbadea8e219949efe8214c346"
+  },
+  "worker/src/noSignal.ts": {
+    "mtime": 1788353670.356867,
+    "seen": 1789650263.4941351,
+    "ast_hash": "fd01f700ebd4faf32a81e0cab400cb8a",
+    "semantic_hash": "fd01f700ebd4faf32a81e0cab400cb8a"
+  },
+  "worker/src/snapshotCache.ts": {
+    "mtime": 1788441800.0936885,
+    "seen": 1789650263.494136,
+    "ast_hash": "e8553423091c9441c539b57ea53132a1",
+    "semantic_hash": "e8553423091c9441c539b57ea53132a1"
+  },
+  "worker/src/stream.ts": {
+    "mtime": 1788441526.7010233,
+    "seen": 1789650263.494136,
+    "ast_hash": "c9619cd9de9afaf2836e264bf61ea2b0",
+    "semantic_hash": "c9619cd9de9afaf2836e264bf61ea2b0"
+  },
+  "worker/tsconfig.json": {
+    "mtime": 1788353656.6239953,
+    "seen": 1789650263.494137,
+    "ast_hash": "3f2cfa6ea8a55ce01b13e156a8087fd5",
+    "semantic_hash": "3f2cfa6ea8a55ce01b13e156a8087fd5"
+  },
+  "README.md": {
+    "mtime": 1788442201.999274,
+    "seen": 1789650263.494138,
+    "ast_hash": "158a5952f0c46493c54d18e517c86853",
+    "semantic_hash": "158a5952f0c46493c54d18e517c86853"
+  },
+  "docker-compose.yml": {
+    "mtime": 1788353653.4851367,
+    "seen": 1789650263.494138,
+    "ast_hash": "9f3ff98695c77bac5e55a1c203f85ee6",
+    "semantic_hash": "9f3ff98695c77bac5e55a1c203f85ee6"
+  }
+}
