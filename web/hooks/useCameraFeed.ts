@@ -2,12 +2,12 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-export function useCameraFeed(cameras: number[], pollIntervalMs: number) {
+export function useCameraFeed(cameras: number[], pollIntervalMs: number, coverCameras = false) {
   const [fullscreenId, setFullscreenId] = useState<number | null>(null);
   const imgRefs = useRef<Record<number, HTMLImageElement | null>>({});
 
   useEffect(() => {
-    if (fullscreenId !== null) return;
+    if (fullscreenId !== null || coverCameras) return;
     const interval = setInterval(() => {
       cameras.forEach((id) => {
         const img = imgRefs.current[id];

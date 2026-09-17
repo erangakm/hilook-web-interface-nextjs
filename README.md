@@ -35,6 +35,7 @@ This is a Node/Next.js rewrite of [Mo-Fouadd/HiLook-Web-View-Interface](https://
    - `TARGET_CAMERAS` — comma-separated channel numbers to poll
    - `GROUP_1`, `GROUP_2`, `GROUP_3`, ... — how cameras are grouped into rows on the grid view; the first group also becomes the "main" camera on `/focus`
    - `POLL_INTERVAL` — seconds between snapshot refreshes per group
+   - `COVER_UP_CAMERAS` — set to `1` to show a skeleton placeholder instead of real camera feeds (demo mode)
 3. Build and run:
    ```
    docker compose up --build

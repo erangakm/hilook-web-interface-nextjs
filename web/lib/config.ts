@@ -22,4 +22,5 @@ export const config = {
   focusMain: groups[0]?.[0],
   focusOthers: groups.slice(1).flat(),
   pollIntervalMs: Number(process.env.POLL_INTERVAL ?? '1') * 1000,
+  coverCameras: process.env.COVER_UP_CAMERAS === '1',
 };
