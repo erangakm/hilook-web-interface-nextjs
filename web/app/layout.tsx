@@ -1,5 +1,6 @@
-import './globals.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import type { ReactNode } from 'react';
+import StyledJsxRegistry from '@/lib/StyledJsxRegistry';
 
 export const metadata = {
   title: 'HiLook Smart-View',
@@ -8,7 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="bg-black text-white font-monospace overflow-hidden vw-100 vh-100">
+        <StyledJsxRegistry>{children}</StyledJsxRegistry>
+      </body>
     </html>
   );
 }

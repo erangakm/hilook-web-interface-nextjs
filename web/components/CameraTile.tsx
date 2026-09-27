@@ -39,6 +39,58 @@ export function CameraTile({
         src={isFullscreen ? `/api/stream/${id}` : `/api/snapshot/${id}`}
         alt={`Camera ${id}`}
       />
+      <style jsx>{`
+        .cam {
+          border: 1px solid #222;
+          position: relative;
+          background: #111;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease-in-out;
+          z-index: 1;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: fill;
+          display: block;
+          transition: all 0.3s ease-in-out;
+        }
+
+        .label {
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          background: rgba(0, 0, 0, 0.8);
+          padding: 2px 5px;
+          font-size: 12px;
+          z-index: 10;
+        }
+
+        .fullscreen {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          /* !important beats the sizing class FocusGrid passes in via className */
+          width: min(100vw, calc(100vh * 16 / 9)) !important;
+          height: min(100vh, calc(100vw * 9 / 16)) !important;
+          z-index: 1000;
+          background: #000;
+          border: none;
+          margin: 0;
+        }
+
+        .hidden {
+          opacity: 0;
+          pointer-events: none;
+          position: absolute;
+          z-index: -1;
+        }
+      `}</style>
     </div>
   );
 }
