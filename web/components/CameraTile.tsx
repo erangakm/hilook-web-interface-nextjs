@@ -15,14 +15,12 @@ export function CameraTile({
   fullscreenId,
   imgRefs,
   toggle,
-  coverCameras,
   className,
 }: {
   id: number;
   fullscreenId: number | null;
   imgRefs: MutableRefObject<Record<number, HTMLImageElement | null>>;
   toggle: (id: number) => void;
-  coverCameras?: boolean;
   className?: string;
 }) {
   const isFullscreen = fullscreenId === id;
@@ -34,22 +32,13 @@ export function CameraTile({
       onDoubleClick={() => toggle(id)}
     >
       <div className="label">{CAMERA_NAMES[id] ?? `CAM ${id}`}</div>
-      {coverCameras ? (
-        <div className="cam-covered">
-          <span className="cam-covered-icon" aria-hidden="true">
-            &#128683;
-          </span>
-          <span>Camera privacy mode on</span>
-        </div>
-      ) : (
-        <img
-          ref={(el) => {
-            imgRefs.current[id] = el;
-          }}
-          src={isFullscreen ? `/api/stream/${id}` : `/api/snapshot/${id}`}
-          alt={`Camera ${id}`}
-        />
-      )}
+      <img
+        ref={(el) => {
+          imgRefs.current[id] = el;
+        }}
+        src={isFullscreen ? `/api/stream/${id}` : `/api/snapshot/${id}`}
+        alt={`Camera ${id}`}
+      />
     </div>
   );
 }
